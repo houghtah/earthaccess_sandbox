@@ -4,17 +4,17 @@ Rubric to push files to my GitHub from a terminal window in a jupyter notebook
 
 
 (**notebook**) jovyan@jupyter-houghtah:~/earthaccess_sandbox$ git status
-On branch main
-Your branch is up to date with 'origin/main'.
+<br>On branch main
+<br>Your branch is up to date with 'origin/main'.
 
-nothing to commit, working tree clean
+<br>nothing to commit, working tree clean
 
 
 (**notebook**) jovyan@jupyter-houghtah:~/earthaccess_sandbox$ cp ../earthdata_scratch.ipynb ../functions/read_sat_functions.py .
 
 
 (**notebook**) jovyan@jupyter-houghtah:~/earthaccess_sandbox$ ls
-earthdata_scratch.ipynb  list_pace_suites.ipynb  README.md  read_sat_functions.py
+<br>earthdata_scratch.ipynb  list_pace_suites.ipynb  README.md  read_sat_functions.py
 
 
 (**notebook**) jovyan@jupyter-houghtah:~/earthaccess_sandbox$ git status
