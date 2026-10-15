@@ -149,3 +149,20 @@ def add_swath_outline(ax, dataset, data_var, outline_color='black', linewidth=1)
     ax.plot(perimeter_lons, perimeter_lats, color=outline_color, 
             linewidth=linewidth, label='Swath Outline', linestyle=":")
     #ax.legend()
+
+
+# find the pixel nearest to a provided latitude and longitude
+#
+def find_closest_pixel(lat_array, lon_array, target_lat, target_lon):
+    
+    # Calculate the squared Euclidean distance 
+    # (Using squared distance saves computation time over taking the square root)
+    dist_sq = (lat_array - target_lat)**2 + (lon_array - target_lon)**2
+    
+    # Find the index of the minimum distance in the flattened array
+    min_index_1d = np.argmin(dist_sq)
+    
+    # Convert the 1D index back to 2D (row, col) coordinates
+    row, col = np.unravel_index(min_index_1d, lat_array.shape)
+    
+    return row, col
